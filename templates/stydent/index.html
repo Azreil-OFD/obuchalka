@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Погодное приложение</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body cz-shortcut-listen="true" class="scene">
+
+    <div class="container py-3">
+        <header>
+        <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+            <svg width="40" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--emojione-monotone" preserveAspectRatio="xMidYMid meet"><path d="M28.271 30h7.459l-3.729-9.938z" fill="currentColor"></path><path d="M52 2H12C6.477 2 2 6.476 2 12v40c0 5.523 4.477 10 10 10h40c5.523 0 10-4.477 10-10V12c0-5.524-4.477-10-10-10zM41.733 46l-4.202-11.199h-11.06L22.267 46H17l12.01-32h5.982L47 46h-5.267z" fill="currentColor"></path></svg>
+
+              <span class="fs-4">vocado</span>
+          </a>
+
+          <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+            <a class="me-3 py-2 text-dark text-decoration-none" href="#">Иди</a>
+            <a class="me-3 py-2 text-dark text-decoration-none" href="#">те</a>
+            <a class="me-3 py-2 text-dark text-decoration-none" href="#">все</a>
+            <a class="py-2 text-dark text-decoration-none" href="#">нахуй</a>
+          </nav>
+        </div>
+      </header>
+        <main class="container">
+            <h1>Добавить пользователя</h1>
+            <div class="row">
+                <div class="col-5 offset-1">
+                    <form action="" method="post">
+                        {%   csrf_token %}
+                        <label for="city">Город</label>
+                        {{ form.name }}
+                        <input type="submit" name="send" value="Отслеживать" class="mt-2 btn btn-danger">
+
+                    </form>
+                    <form action="" method="post">
+                        {%   csrf_token %}
+                        <input type="submit" name="send" value="Очистить" class="mt-2 btn btn-danger">
+                    </form>
+                </div>
+            </div>
+        </main>
+
+    </div>
+</body>
+</html>
